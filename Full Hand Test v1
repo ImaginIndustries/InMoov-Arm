@@ -1,0 +1,77 @@
+#include <Servo.h>
+
+Servo thumb; // Define thumb servo
+Servo index_finger; // Define index servo
+Servo middle_finger;
+Servo ring_finger;
+Servo pinky_finger;
+Servo servowrist;
+
+
+void setup() {
+thumb.attach(2); // Set thumb servo to digital pin 2
+index_finger.attach(3); // Set index servo to digital pin 3
+middle_finger.attach(4);
+ring_finger.attach(5);
+pinky_finger.attach(6);
+servowrist.attach(7);
+
+}
+
+void loop() { // Loop through motion tests
+alltovirtual(); // Example: alltovirtual
+delay(4000); // Wait 4000 milliseconds (4 seconds)
+//alltorest(); // Uncomment to use this
+//delay(4000); // Uncomment to use this
+//alltomax(); // Uncomment to use this
+//delay(2000); // Uncomment to use this
+//allto90(); // Uncomment to use this
+//delay(2000); // Uncomment to use this
+
+}
+
+// Motion to set the servo into "virtual" 0 position: alltovirtual
+void alltovirtual() {
+thumb.write(0);
+index_finger.write(0);
+middle_finger.write(0);
+ring_finger.write(0);
+pinky_finger.write(0);
+servowrist.write(0);
+
+}
+
+// Motion to set the servo into "rest" position: alltorest
+void alltorest() {
+thumb.write(0);
+index_finger.write(0);
+middle_finger.write(0);
+ring_finger.write(0);
+pinky_finger.write(0);
+servowrist.write(0);
+
+}
+
+// Motion to set the servo into "max" position: alltomax
+void alltomax() {
+thumb.write(180);
+index_finger.write(180);
+middle_finger.write(180);
+ring_finger.write(180);
+pinky_finger.write(180);
+servowrist.write(180);
+
+
+}
+
+// Motion to set the servo into "90" position: allto90
+void allto90() {
+thumb.write(90);
+index_finger.write(90);
+middle_finger.write(90);
+ring_finger.write(90);
+pinky_finger.write(90);
+servowrist.write(90);
+
+
+}
